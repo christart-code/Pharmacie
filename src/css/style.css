@@ -1,0 +1,29 @@
+.leftPane{
+	-fx-background-color:#000;
+}
+
+.btn{
+	-fx-background-radius:30;
+}
+
+.champSaisie{
+	-fx-background-radius:100;
+}
+.japhet{
+	-fx-background-color:blue;
+}
+.sekolet{
+	-fx-background-color:black;
+}
+.couleur{
+	-fx-margin:12px;
+}
+.texte{
+	-fx-color:white;
+}
+.font{
+	-fx-font-family:Lucida Calligraphy;
+}
+.texte1{
+	-fx-border-color:white;
+}

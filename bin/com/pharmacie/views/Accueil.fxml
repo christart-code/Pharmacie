@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="729.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.controllers.AccueilController">
+   <children>
+      <BorderPane fx:id="borderPane" layoutY="-49.0" prefHeight="717.0" prefWidth="931.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-84.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox fx:id="leftPane" prefHeight="580.0" prefWidth="225.0" spacing="10.0" styleClass="leftPane" stylesheets="@../../../css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="medicamentBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadMedicament" prefHeight="46.0" prefWidth="133.0" styleClass="btn" text="Medicament">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="clientBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadClient" prefHeight="46.0" prefWidth="133.0" styleClass="btn" text="Client">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="fournisseurBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadFournisseur" prefHeight="46.0" prefWidth="133.0" styleClass="btn" text="Fournisseur">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="commandeBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadVente" prefHeight="46.0" prefWidth="133.0" styleClass="btn" text="Vente">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="livraisonBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadAchat" prefHeight="46.0" prefWidth="133.0" styleClass="btn" text="Achat">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="categorieBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadCategorie" prefHeight="46.0" prefWidth="133.0" styleClass="btn" text="Catégorie">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="eBtn" layoutX="30.0" layoutY="410.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadEmploye" prefHeight="46.0" prefWidth="133.0" styleClass="btn" text="Employé">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin></Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="20.0" />
+               </padding>
+            </VBox>
+         </left>
+         <top>
+            <Pane fx:id="topPane" prefHeight="88.0" prefWidth="848.0" stylesheets="@../../../css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="286.0" layoutY="27.0" prefHeight="31.0" prefWidth="275.0" text="Gestion de la Pharmacie">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

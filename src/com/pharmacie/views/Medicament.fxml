@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="609.0" prefWidth="894.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.controllers.MedicamentController">
+   <children>
+      <TabPane layoutY="17.0" prefHeight="598.0" prefWidth="747.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="17.0">
+        <tabs>
+          <Tab text="Gestion medicament">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="643.0" prefWidth="932.0">
+                     <children>
+                        <Pane layoutX="14.0" layoutY="5.0" prefHeight="634.0" prefWidth="364.0" style="-fx-border-color: pink;">
+                           <children>
+                              <VBox layoutX="14.0" layoutY="39.0" prefHeight="426.0" prefWidth="309.0" spacing="20.0">
+                                 <children>
+                                    <TextField fx:id="idTf" disable="true" prefHeight="35.0" prefWidth="190.0" promptText="id" styleClass="champSaisie" />
+                                    <TextField fx:id="nomTf" prefHeight="35.0" prefWidth="190.0" promptText="Nom medicament" styleClass="champSaisie" />
+                                    <TextField fx:id="codeTf" prefHeight="35.0" prefWidth="190.0" promptText="code medicament" styleClass="champSaisie" />
+                                    <TextField fx:id="prixTf" prefHeight="35.0" prefWidth="190.0" promptText="prix medicament" styleClass="champSaisie" />
+                                    <Spinner fx:id="qteStockSp" prefHeight="25.0" prefWidth="300.0" />
+                                    <ComboBox fx:id="categorieCb" prefWidth="300.0" promptText="categorie" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <HBox layoutX="10.0" layoutY="515.0" prefHeight="67.0" prefWidth="321.0" spacing="10.0">
+                                 <padding>
+                                    <Insets left="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <Button fx:id="deleteBtn" layoutX="251.0" layoutY="471.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="92.0" styleClass="btn" text="Supprimer" />
+                              <Button fx:id="updateBtn" layoutX="142.0" layoutY="471.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="91.0" styleClass="btn" text="Modifier" />
+                              <Button fx:id="saveBtn" layoutX="24.0" layoutY="471.0" mnemonicParsing="false" onAction="#save" prefHeight="40.0" prefWidth="99.0" styleClass="btn" text="Enregistrer" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="362.0" layoutY="5.0" prefHeight="96.0" prefWidth="459.0" style="-fx-border-color: pink;">
+                           <children>
+                              <TextField fx:id="displayTf" layoutX="30.0" layoutY="14.0" prefHeight="35.0" styleClass="champSaisie" />
+                              <Button fx:id="searchBtn" layoutX="230.0" layoutY="19.0" mnemonicParsing="false" onAction="#search" styleClass="btn" text="Rechercher" />
+                              <Button fx:id="printBtn" layoutX="365.0" layoutY="19.0" mnemonicParsing="false" onAction="#print" styleClass="btn" text="Imprimer" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="365.0" layoutY="101.0" prefHeight="540.0" prefWidth="445.0" style="-fx-border-color: pink;">
+                           <children>
+                              <TableView fx:id="medicamentTv" layoutX="7.0" onMouseClicked="#tableClicked" prefHeight="517.0" prefWidth="449.0">
+                                <columns>
+                                  <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+                                  <TableColumn fx:id="nomCol" prefWidth="75.0" text="NOM" />
+                                    <TableColumn fx:id="codeCol" prefWidth="75.0" text="CODE" />
+                                    <TableColumn fx:id="prixCol" prefWidth="75.0" text="PRIX" />
+                                    <TableColumn fx:id="qteCol" prefWidth="75.0" text="QUANTITE" />
+                                    <TableColumn fx:id="categorieCol" prefWidth="75.0" text="CATEGORIE" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Stattistiques">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
